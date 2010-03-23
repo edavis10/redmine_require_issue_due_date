@@ -1,5 +1,11 @@
 require 'redmine'
 
+require 'dispatcher'
+Dispatcher.to_prepare :redmine_ldap_user_family do
+  require_dependency 'issue'
+  Issue.send(:include, RedmineRequireIssueDueDate::Patches::IssuePatch)
+end
+
 Redmine::Plugin.register :redmine_require_issue_due_date do
   name 'Issue Due Date'
   url 'https://projects.littlestreamsoftware.com/projects/redmine-misc'
