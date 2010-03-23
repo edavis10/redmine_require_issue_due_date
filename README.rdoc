@@ -1,0 +1,27 @@
+= Require Issue Due Date
+
+Require Issue Due Date is a plugin to require setting due dates on issues.
+
+== Getting the plugin
+
+A copy of the plugin can be downloaded from {Little Stream Software}[https://projects.littlestreamsoftware.com/projects/redmine-misc/files] or from {GitHub}[http://github.com/edavis10/redmine_require_issue_due_date]
+
+== Installation and Setup
+
+1. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 
+2. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
+
+== Usage
+
+It will automatically make Issue due dates required.
+
+Run <tt>rake require_issue_due_date:update_blank_due_dates DUE_DATE=2010-12-31</tt> to do a bulk update of your Issue due dates.
+
+== License
+
+This plugin is licensed under the GNU GPL v2.  See COPYRIGHT.txt and GPL.txt for details.
+
+== Project help
+
+If you need help you can contact the maintainer at the Bug Tracker.  The bug tracker is located at  https://projects.littlestreamsoftware.com
+
