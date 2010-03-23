@@ -1,7 +1,7 @@
 require 'redmine'
 
 require 'dispatcher'
-Dispatcher.to_prepare :redmine_ldap_user_family do
+Dispatcher.to_prepare :redmine_require_issue_due_date do
   require_dependency 'issue'
   Issue.send(:include, RedmineRequireIssueDueDate::Patches::IssuePatch)
 end
